@@ -1,0 +1,1 @@
+# TypoLingo - Projeto de Tradução com TypeScript

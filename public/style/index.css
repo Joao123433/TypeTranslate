@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #400D37;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: #fff;
+  width: 80%;
+  height: 75%;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}
+
+#textareas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 78%
+}
+
+#textareas textarea {
+  border: 1px solid black;
+  outline: none;
+  font-size: 2rem;
+  display: flex;
+  resize: none;
+  padding: 10px 20px;
+  border-radius: 8px 0px 0px 0px;
+}
+
+#textareas textarea:nth-child(even) {
+  border-left: none;
+  background-color: white;
+  border-radius: 0px 8px 0px 0px;
+}
+
+#textareas textarea:nth-child(even):hover {
+  background-color: rgba(127, 255, 212, 0.068);
+}
+
+#selects {
+  border: 1px solid black;
+  border-top: none;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0px 0px 8px 8px;
+}
+
+#selects select {
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+#traduzir {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #5a124d;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
