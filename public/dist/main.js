@@ -1,10 +1,11 @@
 const textTranslate = document.querySelector("#text-traslate");
 async function fetchText(text, translateFrom, translateTo) {
     const response = await fetch(`https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`);
-    if (response.ok) {
-        return response.json();
+    const result = await response.json();
+    if (result.responseStatus === 200) {
+        return result;
     }
-    return Promise.reject("Erro ao Traduzir");
+    return Promise.reject("Erro inesperado");
 }
 function getInput() {
     const input = document.querySelector("#text");
@@ -21,7 +22,7 @@ function errorInput() {
         getInput();
     }
     catch (error) {
-        setError(error);
+        setError(error.message);
     }
 }
 function getSelects() {
@@ -42,10 +43,11 @@ async function traslate(ev) {
         const inputText = getInput();
         const selects = getSelects();
         const response = await fetchText(inputText, selects[0].value, selects[1].value);
+        console.log(response);
         settingTextTransalate(response);
     }
     catch (error) {
-        setError(error.message);
+        setError(error);
     }
 }
 document.querySelector("form").addEventListener("submit", traslate);
