@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
     "outDir": "public/dist",
-    "target": "ESNext"
+    "target": "ES2015"
   }
 }

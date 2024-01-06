@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -76,4 +77,64 @@ form {
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+@media(max-width: 750px) {
+  main {
+    width: 70%;
+    height: 65%;
+  }
+}
+
+@media(max-width: 550px) {
+  main {
+    width: 60%;
+    height: 50%;
+  }
+
+  #textareas textarea {
+    font-size: 1.5rem;
+  }
+
+  #selects select {
+    font-size: 1rem;
+  }
+
+  #traduzir {
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 400px) {
+  main {
+    width: 55%;
+    height: 45%;
+  }
+  
+  #textareas textarea {
+    font-size: 1rem;
+  }
+
+  #selects select {
+    font-size: 0.9rem;
+  }
+
+  #traduzir {
+    font-size: 0.8rem;
+  }
+}
+
+@media(min-width: 2000px) {
+  main {
+    width: 60%;
+    height: 65%;
+  }
+
+  #selects select {
+    font-size: 1.5rem;
+  }
+
+  #traduzir {
+    font-size: 1.4rem;
+  }
 }

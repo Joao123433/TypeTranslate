@@ -1,4 +1,4 @@
-const textTranslate: HTMLElement = document.querySelector("#text-traslate")
+const textTranslate: HTMLInputElement = document.querySelector("#text-traslate")
 
 interface Translate {
   responseData: {
@@ -59,7 +59,6 @@ async function traslate(ev: { preventDefault: () => void }) {
     const inputText = getInput()
     const selects = getSelects()
     const response: Translate = await fetchText(inputText, selects[0].value, selects[1].value)
-    console.log(response)
     settingTextTransalate(response)
   } catch(error) {
     setError(error)
